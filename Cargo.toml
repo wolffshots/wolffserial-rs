@@ -2,9 +2,10 @@
 name = "wolffserial"
 version = "0.1.0"
 edition = "2018"
+authors = ["jadon <16850875+wolffshots@users.noreply.github.com>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-serialport = "4.0.1"
-clap = "2.32"
+serialport = "^4"
+clap = "^2"
