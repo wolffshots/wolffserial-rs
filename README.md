@@ -1,4 +1,11 @@
 # wolffserial
+![GitHub Build_Win](https://img.shields.io/github/workflow/status/wolffshots/wolffserial/build_win/main)
+![GitHub Build_Ubuntu](https://img.shields.io/github/workflow/status/wolffshots/wolffserial/build_ubuntu/main)
+![License](https://img.shields.io/github/license/wolffshots/wolffserial)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wolffshots/wolffserial)
+![GitHub repo size](https://img.shields.io/github/repo-size/wolffshots/wolffserial)
+![Lines of code](https://img.shields.io/tokei/lines/github/wolffshots/wolffserial)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/wolffshots/wolffserial)
 
 a lil helper program for reading from a serial port and listing available serial ports
 
