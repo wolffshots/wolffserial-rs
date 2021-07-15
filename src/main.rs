@@ -6,6 +6,9 @@ use std::time::Duration;
 
 use clap::{App, AppSettings, Arg, SubCommand};
 
+/**
+ * entrypoint for app
+ */
 fn main() {
     let matches = App::new("Recieve input from a serial device")
         .about("Reads data from a serial port and echoes it to stdout")
@@ -74,9 +77,13 @@ fn valid_baud(val: String) -> Result<(), String> {
  */
 fn list_ports() {
     let ports = serialport::available_ports().unwrap();
-    println!("Ports found:\tport\ttype");
+    if ports.len() > 0 {
+        println!("Ports found: {}", ports.len());
+    }else{
+        println!("No serial ports found");
+    }
     for port in ports {
-        println!("\t\t{0}\t{1}", port.port_name, get_port_type(port.port_type));
+        println!("\t{0}\t{1}", port.port_name, get_port_type(port.port_type));
     }
 }
 
