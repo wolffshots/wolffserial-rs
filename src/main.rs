@@ -79,7 +79,7 @@ fn list_ports() {
     let ports = serialport::available_ports().unwrap();
     if ports.len() > 0 {
         println!("Ports found: {}", ports.len());
-    }else{
+    } else {
         println!("No serial ports found");
     }
     for port in ports {
