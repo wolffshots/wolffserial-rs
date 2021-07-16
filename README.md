@@ -1,4 +1,4 @@
-# wolffserial
+# wolffserial-rs
 ![GitHub Build_Win](https://img.shields.io/github/workflow/status/wolffshots/wolffserial/build_win/main)
 ![GitHub Build_Ubuntu](https://img.shields.io/github/workflow/status/wolffshots/wolffserial/build_ubuntu/main)
 ![License](https://img.shields.io/github/license/wolffshots/wolffserial)
