@@ -49,7 +49,10 @@ fn main() {
                     match port.read(serial_buf.as_mut_slice()) {
                         Ok(t) => io::stdout().write_all(&serial_buf[..t]).unwrap(),
                         Err(ref e) if e.kind() == io::ErrorKind::TimedOut => (),
-                        Err(e) => eprintln!("{:?}", e),
+                        Err(e) => {
+                            eprintln!("{:?}", e);
+                            ::std::process::exit(1);
+                        },
                     }
                 }
             }
