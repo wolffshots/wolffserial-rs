@@ -6,7 +6,7 @@ authors = ["jadon <16850875+wolffshots@users.noreply.github.com>"]
 description = "Simple cli tool for listing and watching serial ports"
 readme = "README.md"
 repository = "https://github.com/wolffshots/wolffserial-rs"
-license-file = "LICENSE.md"
+license = "MIT"
 keywords = ["serial"]
 categories = ["command-line-utilities"]
 
