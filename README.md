@@ -41,3 +41,7 @@ SUBCOMMANDS:
     list     Lists available devices
     watch    Watch a specific device
 ```
+
+# todo
+- [ ] rebrand with generalised utility
+- [ ] timeout to retry on disconnect 
