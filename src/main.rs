@@ -63,9 +63,6 @@ fn main() {
         }
     } else if let Some(_sub_matches) = matches.subcommand_matches("list") {
         list_ports();
-    } else{
-        println!("Enter a subcommand");
-        ::std::process::exit(0);
     }
 }
 
