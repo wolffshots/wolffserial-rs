@@ -39,7 +39,7 @@ fn main() {
         let port_name = matches.value_of("port").unwrap();
         let baud_rate = matches.value_of("baud").unwrap().parse::<u32>().unwrap();
         let port = serialport::new(port_name, baud_rate)
-            .timeout(Duration::from_millis(10))
+            .timeout(Duration::from_millis(100))
             .open();
         match port {
             Ok(mut port) => {
@@ -63,6 +63,9 @@ fn main() {
         }
     } else if let Some(_sub_matches) = matches.subcommand_matches("list") {
         list_ports();
+    } else{
+        println!("Enter a subcommand");
+        ::std::process::exit(0);
     }
 }
 
@@ -93,14 +96,11 @@ fn list_ports() {
 /**
  * returns a String with a brief decriptor for the port
  */
-fn get_port_type(port_type_enum: serialport::SerialPortType) -> String {
-    let mut port_type: String = String::from("usb");
-    if port_type_enum == serialport::SerialPortType::PciPort {
-        port_type = String::from("pci");
-    } else if port_type_enum == serialport::SerialPortType::BluetoothPort {
-        port_type = String::from("bluetooth");
-    } else if port_type_enum == serialport::SerialPortType::Unknown {
-        port_type = String::from("unknown");
-    }
-    return port_type;
+fn get_port_type(port_type: serialport::SerialPortType) -> String {
+    return match port_type{
+        serialport::SerialPortType::UsbPort(_) => {String::from("usb")}
+        serialport::SerialPortType::PciPort => {String::from("pci")}
+        serialport::SerialPortType::BluetoothPort => {String::from("bluetooth")}
+       _ => {String::from("unknown")}
+    };
 }
