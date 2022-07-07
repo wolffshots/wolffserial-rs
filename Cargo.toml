@@ -1,7 +1,7 @@
 [package]
 name = "wolffserial"
-version = "0.2.0"
-edition = "2018"
+version = "0.2.1"
+edition = "2021"
 authors = ["jadon <16850875+wolffshots@users.noreply.github.com>"]
 description = "Simple cli tool for listing and watching serial ports"
 readme = "README.md"
@@ -14,4 +14,4 @@ categories = ["command-line-utilities"]
 
 [dependencies]
 serialport = "^4"
-clap = "^2"
+clap = "^3"
