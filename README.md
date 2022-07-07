@@ -44,4 +44,5 @@ SUBCOMMANDS:
 
 # todo
 - [ ] rebrand with generalised utility
-- [ ] timeout to retry on disconnect 
+- [ ] timeout to retry on disconnect
+- [ ] add initial example tests 
